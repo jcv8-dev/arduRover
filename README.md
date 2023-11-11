@@ -11,5 +11,5 @@ An ArduPilot powered sonar vessel
 
 
 ### Flightcontroller
-#### Serial Ports
+#### Serial Ports mapping
 - RX6/TX6 -> SERIAL4
