@@ -20,3 +20,4 @@ The sonar I have isn't supported by ArduPilot.
 So naturally i wrote a simple Arduino Sketch which runs on a Lolin(Wemos) D1 mini. It translates any value you can calculate or read from any pins to the protocol of the GY-US42v2 RangeFinder. Connect the D1 to SERIAL4 and configure the rangefinder to be a GY-US42v2.
 
 The A0221A4 has a range of 3-450cm in air. In water this calculates to about 14-1900cm. Set the rangefinder min/max accordingly.
+Since the Sonar outputs a value in cm and i have no clue which speed of sound it uses to calculate the distance, the distance in water is not as accurate as it could be. I used (1 / 343) * 1481 = 4,3177842566 as a scaling factor for the distance in air, to get the distance in water.
