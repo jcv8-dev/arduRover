@@ -101,7 +101,7 @@ void receiveData()
         sonar.readBytes(data, 7);
         distance = word(data[3],data[4]);
         Serial.printf("Air:\t%f\n",distance*0.1f);
-        distance_water = distance * 4.3177842566f; // convert to speed of sound in water
+        distance_water = distance * 4.3177842566f; // convert to speed of sound in water -> (1 / 343) * 1481 = 4,3177842566
         Serial.printf("Water\t%f\n", distance_water*0.1f);
     }
     delay(10);
